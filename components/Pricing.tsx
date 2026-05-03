@@ -11,9 +11,9 @@ const plans = [
 
 export function Pricing() {
   return (
-    <section id="pricing" className="relative py-32">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="flex items-baseline justify-between mb-20">
+    <section id="pricing" className="relative py-20 md:py-32">
+      <div className="max-w-7xl mx-auto px-4 md:px-6">
+        <div className="flex items-baseline justify-between mb-12 md:mb-20">
           <div className="flex items-center gap-4">
             <span className="font-display text-sm tracking-[0.3em] text-accent-lime">05 ──</span>
             <span className="font-display text-sm tracking-widest text-ink-100/40">PRICING</span>
@@ -26,18 +26,18 @@ export function Pricing() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="font-display font-bold text-4xl md:text-5xl lg:text-6xl leading-tight tracking-tight max-w-3xl mb-8"
+          className="font-display font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight tracking-tight max-w-3xl mb-6 md:mb-8"
         >
           依代理商規模，
           <br />
           <span className="text-accent-lime">五階方案</span>
         </motion.h2>
 
-        <p className="text-ink-100/60 max-w-2xl mb-16 leading-relaxed">
+        <p className="text-sm md:text-base text-ink-100/60 max-w-2xl mb-10 md:mb-16 leading-relaxed">
           14 天免費試用、30 天退款保證、前 10 家 Founding Members 享 6 個月 5 折優惠。
         </p>
 
-        <div className="grid lg:grid-cols-5 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
           {plans.map((plan, i) => (
             <motion.div
               key={plan.name}
@@ -94,7 +94,7 @@ export function Pricing() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, delay: 0.4 }}
-          className="mt-12 p-8 lg:p-12 border border-accent-lime/30 bg-gradient-to-br from-accent-lime/10 to-transparent relative overflow-hidden"
+          className="mt-12 p-6 sm:p-8 lg:p-12 border border-accent-lime/30 bg-gradient-to-br from-accent-lime/10 to-transparent relative overflow-hidden"
         >
           <div className="absolute top-0 right-0 w-72 h-72 bg-accent-lime/10 rounded-full blur-3xl" />
           <div className="relative grid md:grid-cols-2 gap-8 items-center">
@@ -102,7 +102,7 @@ export function Pricing() {
               <div className="font-display text-xs tracking-widest text-accent-lime mb-3">
                 FOUNDING MEMBERS · LIMITED 10 SLOTS
               </div>
-              <h3 className="font-display font-bold text-3xl mb-4 leading-tight">
+              <h3 className="font-display font-bold text-2xl sm:text-3xl mb-4 leading-tight">
                 成為前 10 家種子客戶，<br />享 6 個月 <span className="text-accent-lime">5 折優惠</span>
               </h3>
               <p className="text-ink-100/70 leading-relaxed text-sm">
@@ -112,7 +112,7 @@ export function Pricing() {
             <div className="flex md:justify-end">
               <a
                 href="#waitlist"
-                className="group inline-flex items-center gap-2 px-7 py-4 bg-accent-lime text-ink-950 font-display font-semibold tracking-wide hover:bg-accent-glow hover:shadow-[0_0_40px_rgba(212,255,0,0.4)] transition-all"
+                className="group inline-flex items-center gap-2 px-5 sm:px-7 py-3 sm:py-4 bg-accent-lime text-ink-950 font-display font-semibold tracking-wide hover:bg-accent-glow hover:shadow-[0_0_40px_rgba(212,255,0,0.4)] transition-all text-sm sm:text-base"
               >
                 報名 FOUNDING MEMBERS
                 <span className="group-hover:translate-x-1 transition-transform">→</span>

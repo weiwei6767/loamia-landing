@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export function Hero() {
   return (
-    <section id="top" className="relative min-h-screen pt-32 pb-20 overflow-hidden noise">
+    <section id="top" className="relative min-h-screen pt-24 md:pt-32 pb-16 md:pb-20 overflow-hidden noise">
       {/* Animated Blobs */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="blob bg-accent-lime/30 w-[500px] h-[500px] -top-32 -left-32 animate-blob-1" />
@@ -18,9 +18,9 @@ export function Hero() {
       <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-ink-950 to-transparent pointer-events-none" />
       <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-ink-950 to-transparent pointer-events-none" />
 
-      <div className="relative max-w-7xl mx-auto px-6 grid lg:grid-cols-12 gap-8 items-center min-h-[80vh]">
+      <div className="relative max-w-7xl mx-auto px-4 md:px-6 grid lg:grid-cols-12 gap-8 items-center min-h-[80vh]">
         {/* Left Content */}
-        <div className="lg:col-span-7 space-y-8">
+        <div className="lg:col-span-7 space-y-6 md:space-y-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -37,7 +37,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1 }}
-            className="font-display font-bold text-5xl md:text-6xl lg:text-7xl leading-[0.95] tracking-tight"
+            className="font-display font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1] tracking-tight"
           >
             <span className="block">行銷團隊的</span>
             <span className="block">
@@ -53,7 +53,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.25 }}
-            className="text-lg md:text-xl text-ink-100/70 max-w-xl leading-relaxed"
+            className="text-base md:text-xl text-ink-100/70 max-w-xl leading-relaxed"
           >
             Loamia 整合跨平台數據、品牌專屬對話介面、社群海巡互動與 AI 結案報表，讓行銷團隊用一個對話介面，操作品牌所有平台、資料與決策。
           </motion.p>
@@ -66,14 +66,14 @@ export function Hero() {
           >
             <a
               href="#waitlist"
-              className="group inline-flex items-center gap-2 px-7 py-4 bg-accent-lime text-ink-950 font-display font-semibold tracking-wide hover:bg-accent-glow transition-all hover:shadow-[0_0_40px_rgba(212,255,0,0.4)]"
+              className="group inline-flex items-center gap-2 px-5 sm:px-7 py-3 sm:py-4 bg-accent-lime text-ink-950 font-display font-semibold tracking-wide hover:bg-accent-glow transition-all hover:shadow-[0_0_40px_rgba(212,255,0,0.4)] text-sm sm:text-base"
             >
               加入 FOUNDING MEMBERS
               <span className="group-hover:translate-x-1 transition-transform">→</span>
             </a>
             <a
               href="#modules"
-              className="group inline-flex items-center gap-2 px-7 py-4 border border-white/[0.12] hover:border-accent-lime/50 text-ink-50 font-display font-semibold tracking-wide transition-all"
+              className="group inline-flex items-center gap-2 px-5 sm:px-7 py-3 sm:py-4 border border-white/[0.12] hover:border-accent-lime/50 text-ink-50 font-display font-semibold tracking-wide transition-all text-sm sm:text-base"
             >
               了解產品
               <span className="opacity-50 group-hover:opacity-100 group-hover:translate-x-1 transition-all">↓</span>
@@ -85,7 +85,7 @@ export function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="grid grid-cols-3 gap-6 pt-8 border-t border-white/[0.06]"
+            className="grid grid-cols-3 gap-4 sm:gap-6 pt-6 md:pt-8 border-t border-white/[0.06]"
           >
             <div>
               <div className="font-display text-2xl text-accent-lime tabular">6×</div>

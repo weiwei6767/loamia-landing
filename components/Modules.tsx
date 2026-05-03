@@ -57,9 +57,9 @@ const modules = [
 
 export function Modules() {
   return (
-    <section id="modules" className="relative py-32">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="flex items-baseline justify-between mb-20">
+    <section id="modules" className="relative py-20 md:py-32">
+      <div className="max-w-7xl mx-auto px-4 md:px-6">
+        <div className="flex items-baseline justify-between mb-12 md:mb-20">
           <div className="flex items-center gap-4">
             <span className="font-display text-sm tracking-[0.3em] text-accent-lime">02 ──</span>
             <span className="font-display text-sm tracking-widest text-ink-100/40">PRODUCT MODULES</span>
@@ -72,7 +72,7 @@ export function Modules() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="font-display font-bold text-4xl md:text-5xl lg:text-6xl leading-tight tracking-tight max-w-3xl mb-16"
+          className="font-display font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight tracking-tight max-w-3xl mb-10 md:mb-16"
         >
           六大模組，
           <br />
@@ -87,7 +87,7 @@ export function Modules() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.6, delay: i * 0.08 }}
-              className={`group relative p-8 lg:p-10 transition-all duration-500 ${m.span} ${
+              className={`group relative p-6 sm:p-8 lg:p-10 transition-all duration-500 ${m.span} ${
                 m.accent
                   ? "bg-gradient-to-br from-accent-lime/15 via-accent-lime/5 to-transparent border border-accent-lime/30 hover:border-accent-lime/60"
                   : "bg-white/[0.02] border border-white/[0.06] hover:bg-white/[0.04] hover:border-white/[0.12]"
@@ -99,7 +99,7 @@ export function Modules() {
                 </div>
               )}
 
-              <div className="flex items-start justify-between mb-8">
+              <div className="flex items-start justify-between mb-6 md:mb-8">
                 <div className={`font-display text-xs tracking-widest ${m.accent ? "text-accent-lime" : "text-ink-100/40"}`}>
                   {m.tag}
                 </div>
@@ -108,7 +108,7 @@ export function Modules() {
                 </div>
               </div>
 
-              <div className={`font-display font-bold mb-2 ${m.feature ? "text-4xl md:text-5xl" : "text-2xl md:text-3xl"} tracking-tight ${m.accent ? "text-accent-lime" : "text-ink-50"}`}>
+              <div className={`font-display font-bold mb-2 ${m.feature ? "text-3xl sm:text-4xl md:text-5xl" : "text-xl sm:text-2xl md:text-3xl"} tracking-tight ${m.accent ? "text-accent-lime" : "text-ink-50"}`}>
                 {m.title}
               </div>
 

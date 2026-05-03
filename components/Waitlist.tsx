@@ -18,11 +18,11 @@ export function Waitlist() {
   };
 
   return (
-    <section id="waitlist" className="relative py-32 overflow-hidden">
+    <section id="waitlist" className="relative py-20 md:py-32 overflow-hidden">
       {/* Background blob */}
       <div className="blob bg-accent-lime/20 w-[800px] h-[800px] -top-1/2 left-1/2 -translate-x-1/2 animate-blob-1" />
 
-      <div className="relative max-w-4xl mx-auto px-6 text-center">
+      <div className="relative max-w-4xl mx-auto px-4 md:px-6 text-center">
         <div className="flex items-center justify-center gap-4 mb-8">
           <span className="font-display text-sm tracking-[0.3em] text-accent-lime">07 ──</span>
           <span className="font-display text-sm tracking-widest text-ink-100/40">JOIN WAITLIST</span>
@@ -33,14 +33,14 @@ export function Waitlist() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="font-display font-bold text-5xl md:text-6xl lg:text-7xl leading-[0.95] tracking-tight mb-8"
+          className="font-display font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1] tracking-tight mb-6 md:mb-8"
         >
           現在加入
           <br />
           <span className="text-accent-lime">Founding Members</span>
         </motion.h2>
 
-        <p className="text-lg text-ink-100/70 max-w-2xl mx-auto mb-12 leading-relaxed">
+        <p className="text-base md:text-lg text-ink-100/70 max-w-2xl mx-auto mb-10 md:mb-12 leading-relaxed">
           Loamia 預計 2026 年 Q3 上線。前 10 家簽約客戶享 6 個月 5 折優惠、創辦人個人 LINE 直接聯繫、新功能優先體驗權。
         </p>
 
@@ -97,18 +97,18 @@ export function Waitlist() {
         )}
 
         {/* Trust Indicators */}
-        <div className="mt-20 grid grid-cols-3 gap-8 max-w-2xl mx-auto">
+        <div className="mt-16 md:mt-20 grid grid-cols-3 gap-4 sm:gap-8 max-w-2xl mx-auto">
           <div>
-            <div className="font-display font-bold text-3xl text-accent-lime tabular">14</div>
-            <div className="text-xs text-ink-100/50 mt-1 font-display tracking-widest">DAY TRIAL</div>
+            <div className="font-display font-bold text-2xl sm:text-3xl text-accent-lime tabular">14</div>
+            <div className="text-[10px] sm:text-xs text-ink-100/50 mt-1 font-display tracking-widest">DAY TRIAL</div>
           </div>
           <div>
-            <div className="font-display font-bold text-3xl text-accent-lime tabular">30</div>
-            <div className="text-xs text-ink-100/50 mt-1 font-display tracking-widest">DAY REFUND</div>
+            <div className="font-display font-bold text-2xl sm:text-3xl text-accent-lime tabular">30</div>
+            <div className="text-[10px] sm:text-xs text-ink-100/50 mt-1 font-display tracking-widest">DAY REFUND</div>
           </div>
           <div>
-            <div className="font-display font-bold text-3xl text-accent-lime tabular">10</div>
-            <div className="text-xs text-ink-100/50 mt-1 font-display tracking-widest">FOUNDING SLOTS</div>
+            <div className="font-display font-bold text-2xl sm:text-3xl text-accent-lime tabular">10</div>
+            <div className="text-[10px] sm:text-xs text-ink-100/50 mt-1 font-display tracking-widest">FOUNDING SLOTS</div>
           </div>
         </div>
       </div>

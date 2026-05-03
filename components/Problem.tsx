@@ -3,13 +3,13 @@ import { motion } from "framer-motion";
 
 export function Problem() {
   return (
-    <section id="problem" className="relative py-32 overflow-hidden">
+    <section id="problem" className="relative py-20 md:py-32 overflow-hidden">
       <div className="absolute top-0 left-1/4 w-px h-full bg-gradient-to-b from-transparent via-white/10 to-transparent pointer-events-none" />
       <div className="absolute top-0 right-1/3 w-px h-full bg-gradient-to-b from-transparent via-white/10 to-transparent pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-4 md:px-6">
         {/* Section Label */}
-        <div className="flex items-baseline justify-between mb-20">
+        <div className="flex items-baseline justify-between mb-12 md:mb-20">
           <div className="flex items-center gap-4">
             <span className="font-display text-sm tracking-[0.3em] text-accent-lime">01 ──</span>
             <span className="font-display text-sm tracking-widest text-ink-100/40">THE PROBLEM</span>
@@ -17,7 +17,7 @@ export function Problem() {
           <div className="hidden md:block font-display text-xs tracking-widest text-ink-100/30">/ 產業真實樣貌</div>
         </div>
 
-        <div className="grid lg:grid-cols-12 gap-12 items-start">
+        <div className="grid lg:grid-cols-12 gap-10 md:gap-12 items-start">
           {/* Left - Big Statement */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -26,7 +26,7 @@ export function Problem() {
             transition={{ duration: 0.7 }}
             className="lg:col-span-7"
           >
-            <h2 className="font-display font-bold text-4xl md:text-5xl lg:text-6xl leading-[1.05] tracking-tight">
+            <h2 className="font-display font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-[1.1] tracking-tight">
               廣告代理商每月花費
               <br />
               <span className="text-accent-lime">大量工時</span>
@@ -34,11 +34,11 @@ export function Problem() {
               在做<span className="text-stroke">無法累積</span>的事
             </h2>
 
-            <p className="mt-10 text-lg text-ink-100/70 leading-relaxed max-w-xl">
+            <p className="mt-8 md:mt-10 text-base md:text-lg text-ink-100/70 leading-relaxed max-w-xl">
               月度結案報告、KOL 名單研究、社群風向監測、跨平台數據整合——這些工作技術門檻不高、極度耗時、產出多為一次性使用，且不同 AE、不同月份重複執行相同流程。
             </p>
 
-            <p className="mt-6 text-lg text-ink-100/70 leading-relaxed max-w-xl">
+            <p className="mt-6 text-base md:text-lg text-ink-100/70 leading-relaxed max-w-xl">
               代理商累積的是<span className="text-accent-lime font-semibold">工時</span>，不是<span className="text-accent-lime font-semibold">資產</span>。
             </p>
           </motion.div>
@@ -81,7 +81,7 @@ export function Problem() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, delay: 0.2 }}
-          className="mt-24 grid md:grid-cols-2 lg:grid-cols-4 gap-px bg-white/[0.06]"
+          className="mt-16 md:mt-24 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-white/[0.06]"
         >
           {[
             { ord: "01", title: "結案報表", desc: "跨平台拉數據、整合表格、撰寫文字分析" },
@@ -89,7 +89,7 @@ export function Problem() {
             { ord: "03", title: "社群風向監測", desc: "追蹤產業話題、競品動向、品牌討論" },
             { ord: "04", title: "跨平台整合", desc: "FB、IG、Google Ads、YouTube 數據彙整" },
           ].map((item, i) => (
-            <div key={i} className="bg-ink-950 p-8 group hover:bg-ink-900 transition-colors">
+            <div key={i} className="bg-ink-950 p-6 md:p-8 group hover:bg-ink-900 transition-colors">
               <div className="font-display text-xs tracking-widest text-accent-lime mb-4">
                 {item.ord}
               </div>

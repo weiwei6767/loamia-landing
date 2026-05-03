@@ -3,12 +3,12 @@ import { motion } from "framer-motion";
 
 export function Differentiation() {
   return (
-    <section className="relative py-32 overflow-hidden">
+    <section className="relative py-20 md:py-32 overflow-hidden">
       <div className="absolute inset-0 bg-grid-fine opacity-30 pointer-events-none" />
       <div className="blob bg-accent-lime/10 w-[600px] h-[600px] top-1/2 -left-48 -translate-y-1/2" />
 
-      <div className="relative max-w-7xl mx-auto px-6">
-        <div className="flex items-baseline justify-between mb-20">
+      <div className="relative max-w-7xl mx-auto px-4 md:px-6">
+        <div className="flex items-baseline justify-between mb-12 md:mb-20">
           <div className="flex items-center gap-4">
             <span className="font-display text-sm tracking-[0.3em] text-accent-lime">03 ──</span>
             <span className="font-display text-sm tracking-widest text-ink-100/40">DIFFERENTIATION</span>
@@ -21,16 +21,58 @@ export function Differentiation() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="font-display font-bold text-4xl md:text-5xl lg:text-6xl leading-tight tracking-tight max-w-4xl mb-20"
+          className="font-display font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight tracking-tight max-w-4xl mb-12 md:mb-20"
         >
           市場上沒有任何工具
           <br />
           同時做到<span className="text-accent-lime">這四件事</span>
         </motion.h2>
 
-        {/* Comparison */}
-        <div className="grid lg:grid-cols-12 gap-px bg-white/[0.06] mb-24">
-          <div className="lg:col-span-3 p-6 bg-ink-950">
+        {/* Comparison — mobile: per-tool cards */}
+        <div className="lg:hidden space-y-3 mb-16">
+          {[
+            { name: "Looker Studio", caps: ["✓", "—", "—", "—"], brand: false },
+            { name: "ViralArc", caps: ["—", "—", "✓", "—"], brand: false },
+            { name: "ChatGPT", caps: ["—", "△", "—", "—"], brand: false },
+            { name: "LOAMIA", caps: ["✓", "✓", "✓", "✓"], brand: true },
+          ].map((tool, i) => {
+            const labels = ["跨平台資料整合", "品牌專屬 AI 對話", "社群海巡互動", "客戶歷史永久累積"];
+            return (
+              <div
+                key={i}
+                className={`p-5 ${tool.brand ? "bg-accent-lime" : "bg-white/[0.02] border border-white/[0.08]"}`}
+              >
+                <div className={`text-xs font-display tracking-widest mb-4 ${tool.brand ? "text-ink-950 font-bold" : "text-ink-100/50"}`}>
+                  {tool.name}
+                </div>
+                <div className="grid grid-cols-2 gap-x-3 gap-y-3 text-sm">
+                  {labels.map((cap, j) => (
+                    <div key={j} className="flex items-center gap-2">
+                      <span
+                        className={`w-5 text-center text-lg font-display shrink-0 ${
+                          tool.brand
+                            ? "text-ink-950 font-bold"
+                            : tool.caps[j] === "✓"
+                              ? "text-accent-lime"
+                              : "text-ink-100/20"
+                        }`}
+                      >
+                        {tool.caps[j]}
+                      </span>
+                      <span className={`text-xs ${tool.brand ? "text-ink-950/80 font-medium" : "text-ink-100/60"}`}>
+                        {cap}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+
+        {/* Comparison — desktop: side-by-side grid */}
+        <div className="hidden lg:grid grid-cols-12 gap-px bg-white/[0.06] mb-24">
+          <div className="col-span-3 p-6 bg-ink-950">
             <div className="text-xs font-display tracking-widest text-ink-100/40 mb-4">
               CAPABILITIES
             </div>
@@ -47,7 +89,7 @@ export function Differentiation() {
             { name: "ViralArc", caps: ["—", "—", "✓", "—"] },
             { name: "ChatGPT", caps: ["—", "△", "—", "—"] },
           ].map((tool, i) => (
-            <div key={i} className="lg:col-span-2 p-6 bg-ink-950">
+            <div key={i} className="col-span-2 p-6 bg-ink-950">
               <div className="text-xs font-display tracking-widest text-ink-100/40 mb-4">
                 {tool.name}
               </div>
@@ -66,7 +108,7 @@ export function Differentiation() {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: 0.3 }}
-            className="lg:col-span-3 p-6 bg-accent-lime relative"
+            className="col-span-3 p-6 bg-accent-lime relative"
           >
             <div className="text-xs font-display tracking-widest text-ink-950/70 mb-4 font-bold">
               LOAMIA
@@ -106,7 +148,7 @@ export function Differentiation() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: i * 0.12 }}
-              className="group relative p-8 border border-white/[0.06] hover:border-accent-lime/40 bg-white/[0.02] hover:bg-white/[0.04] transition-all"
+              className="group relative p-6 sm:p-8 border border-white/[0.06] hover:border-accent-lime/40 bg-white/[0.02] hover:bg-white/[0.04] transition-all"
             >
               <div className="font-serif italic text-3xl text-accent-lime mb-6">{d.num}</div>
               <div className="font-display font-bold text-xl mb-4 group-hover:text-accent-lime transition-colors">

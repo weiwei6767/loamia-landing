@@ -18,14 +18,14 @@ export function Marquee() {
         </p>
       </div>
 
-      <div className="marquee-track gap-16 items-center">
+      <div className="marquee-track gap-8 md:gap-16 items-center">
         {items.map((platform, i) => (
           <div
             key={i}
-            className="font-display text-2xl tracking-tight text-ink-100/40 hover:text-accent-lime transition-colors whitespace-nowrap shrink-0"
+            className="font-display text-xl md:text-2xl tracking-tight text-ink-100/40 hover:text-accent-lime transition-colors whitespace-nowrap shrink-0"
           >
             {platform}
-            <span className="ml-16 text-ink-100/10">/</span>
+            <span className="ml-8 md:ml-16 text-ink-100/10">/</span>
           </div>
         ))}
       </div>

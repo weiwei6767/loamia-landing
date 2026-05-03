@@ -1,9 +1,9 @@
 export function Footer() {
   return (
-    <footer className="relative pt-20 pb-10 border-t border-white/[0.06]">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="grid lg:grid-cols-12 gap-12 mb-16">
-          <div className="lg:col-span-5">
+    <footer className="relative pt-16 md:pt-20 pb-8 md:pb-10 border-t border-white/[0.06]">
+      <div className="max-w-7xl mx-auto px-4 md:px-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-8 md:gap-12 mb-12 md:mb-16">
+          <div className="sm:col-span-2 lg:col-span-5">
             <div className="flex items-center gap-2 mb-6">
               <div className="relative w-7 h-7">
                 <div className="absolute inset-0 bg-accent-lime rotate-45" />

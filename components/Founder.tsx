@@ -3,11 +3,11 @@ import { motion } from "framer-motion";
 
 export function Founder() {
   return (
-    <section id="founder" className="relative py-32 overflow-hidden">
+    <section id="founder" className="relative py-20 md:py-32 overflow-hidden">
       <div className="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
 
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="flex items-baseline justify-between mb-20">
+      <div className="max-w-7xl mx-auto px-4 md:px-6">
+        <div className="flex items-baseline justify-between mb-12 md:mb-20">
           <div className="flex items-center gap-4">
             <span className="font-display text-sm tracking-[0.3em] text-accent-lime">06 ──</span>
             <span className="font-display text-sm tracking-widest text-ink-100/40">FOUNDER</span>
@@ -15,7 +15,7 @@ export function Founder() {
           <div className="hidden md:block font-display text-xs tracking-widest text-ink-100/30">/ 創辦人故事</div>
         </div>
 
-        <div className="grid lg:grid-cols-12 gap-12">
+        <div className="grid lg:grid-cols-12 gap-10 md:gap-12">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -27,7 +27,7 @@ export function Founder() {
             <div className="relative mb-8">
               <div className="aspect-[4/5] bg-gradient-to-br from-accent-lime/10 via-white/[0.02] to-transparent border border-white/[0.08] flex items-center justify-center relative overflow-hidden">
                 <div className="absolute inset-0 bg-grid-fine opacity-30" />
-                <div className="relative font-display font-bold text-9xl text-accent-lime/80">
+                <div className="relative font-display font-bold text-8xl md:text-9xl text-accent-lime/80">
                   陳
                 </div>
                 <div className="absolute bottom-6 left-6 right-6 flex items-end justify-between">
@@ -55,13 +55,13 @@ export function Founder() {
             transition={{ duration: 0.7, delay: 0.15 }}
             className="lg:col-span-7"
           >
-            <h2 className="font-display font-bold text-4xl md:text-5xl leading-tight tracking-tight mb-8">
+            <h2 className="font-display font-bold text-3xl sm:text-4xl md:text-5xl leading-tight tracking-tight mb-6 md:mb-8">
               一個學生<br />
               <span className="text-accent-lime">親身經歷的痛點</span>
             </h2>
 
-            <div className="space-y-6 text-ink-100/70 leading-relaxed">
-              <p className="text-lg">
+            <div className="space-y-6 text-ink-100/70 leading-relaxed text-sm md:text-base">
+              <p className="text-base md:text-lg">
                 我曾於詮識數位股份有限公司擔任實習生，參與廣告代理商日常運作的多項核心業務：為各廠商整理月度與檔期結案報表、研究社群話題風向與品牌議題操作、為廠商研究與提案合適的 KOL 名單、整合多平台廣告數據並撰寫成效分析報告。
               </p>
 
