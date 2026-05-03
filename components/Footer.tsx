@@ -48,7 +48,6 @@ export function Footer() {
             <ul className="space-y-3 text-sm">
               <li className="text-ink-100/60">陳聖凱</li>
               <li className="text-ink-100/60">東吳大學 資訊管理學系</li>
-              <li className="text-ink-100/60">指導：許哲銓 副教授</li>
             </ul>
           </div>
         </div>
@@ -56,9 +55,6 @@ export function Footer() {
         <div className="pt-8 border-t border-white/[0.06] flex flex-col md:flex-row md:items-center md:justify-between gap-4">
           <div className="text-xs text-ink-100/40 font-display tracking-wide">
             © 2026 LOAMIA · ALL RIGHTS RESERVED
-          </div>
-          <div className="text-xs text-ink-100/30 font-display tracking-wide">
-            BUILT WITH VIBE CODING · CLAUDE CODE
           </div>
         </div>
       </div>

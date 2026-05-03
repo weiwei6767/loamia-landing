@@ -80,26 +80,6 @@ export function Hero() {
             </a>
           </motion.div>
 
-          {/* Stats Row */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="grid grid-cols-3 gap-4 sm:gap-6 pt-6 md:pt-8 border-t border-white/[0.06]"
-          >
-            <div>
-              <div className="font-display text-2xl text-accent-lime tabular">6×</div>
-              <div className="text-xs text-ink-100/50 font-display tracking-widest mt-1">FASTER REPORT</div>
-            </div>
-            <div>
-              <div className="font-display text-2xl text-accent-lime tabular">85%</div>
-              <div className="text-xs text-ink-100/50 font-display tracking-widest mt-1">GROSS MARGIN</div>
-            </div>
-            <div>
-              <div className="font-display text-2xl text-accent-lime tabular">∞</div>
-              <div className="text-xs text-ink-100/50 font-display tracking-widest mt-1">DATA ARCHIVE</div>
-            </div>
-          </motion.div>
         </div>
 
         {/* Right Visual - Asymmetric Card Stack */}

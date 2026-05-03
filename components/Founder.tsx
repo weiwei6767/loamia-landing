@@ -42,9 +42,6 @@ export function Founder() {
                   </div>
                 </div>
               </div>
-              <div className="absolute -top-3 -right-3 px-3 py-1 bg-accent-lime text-ink-950 text-xs font-display font-bold tracking-widest -rotate-3">
-                STUDENT FOUNDER
-              </div>
             </div>
           </motion.div>
 
@@ -62,7 +59,7 @@ export function Founder() {
 
             <div className="space-y-6 text-ink-100/70 leading-relaxed text-sm md:text-base">
               <p className="text-base md:text-lg">
-                我曾於詮識數位股份有限公司擔任實習生，參與廣告代理商日常運作的多項核心業務：為各廠商整理月度與檔期結案報表、研究社群話題風向與品牌議題操作、為廠商研究與提案合適的 KOL 名單、整合多平台廣告數據並撰寫成效分析報告。
+                我曾於業界一家廣告代理商擔任實習生，參與日常運作的多項核心業務：為各廠商整理月度與檔期結案報表、研究社群話題風向與品牌議題操作、為廠商研究與提案合適的 KOL 名單、整合多平台廣告數據並撰寫成效分析報告。
               </p>
 
               <p>
@@ -96,19 +93,6 @@ export function Founder() {
               </div>
             </div>
 
-            {/* Advisor */}
-            <div className="mt-10 p-6 bg-white/[0.02] border border-white/[0.06]">
-              <div className="text-xs font-display tracking-widest text-ink-100/40 mb-3">
-                ACADEMIC ADVISOR · 指導老師
-              </div>
-              <div className="font-display font-bold text-lg mb-1">許哲銓 副教授</div>
-              <div className="text-sm text-ink-100/60 mb-2">
-                東吳大學 推廣部主任 / 資訊管理學系
-              </div>
-              <div className="text-xs text-ink-100/50">
-                研究專長：人工智慧、服務流程再造、軟體系統設計、資料庫設計、雲端運算
-              </div>
-            </div>
           </motion.div>
         </div>
       </div>

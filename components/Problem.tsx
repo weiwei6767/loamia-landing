@@ -46,7 +46,7 @@ export function Problem() {
           {/* Right - Pain Stats Stack */}
           <div className="lg:col-span-5 space-y-4">
             {[
-              { num: "50–70%", label: "AE 工時投入低附加價值任務", source: "詮識數位實習觀察" },
+              { num: "50–70%", label: "AE 工時投入低附加價值任務", source: "業界實務觀察" },
               { num: "636.83 億", label: "2024 年台灣數位廣告市場規模", source: "DMA 2024 年度統計報告" },
               { num: "98%+", label: "企業已進入 AI 探索或實驗階段", source: "DMA 產業調查" },
             ].map((stat, i) => (
