@@ -1,20 +1,23 @@
 "use client";
 
+import { useI18n } from "@/lib/i18n/provider";
+
 const platforms = [
   "Facebook", "Instagram", "Threads", "Google Ads", "YouTube",
   "LINE OA", "Meta Ads Library", "Claude API", "OpenAI", "Supabase"
 ];
 
 export function Marquee() {
+  const { t } = useI18n();
   const items = [...platforms, ...platforms];
   return (
-    <section className="relative py-12 border-y border-white/[0.06] overflow-hidden">
+    <section className="relative py-12 border-y border-line/[0.06] overflow-hidden">
       <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-ink-950 to-transparent z-10" />
       <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-ink-950 to-transparent z-10" />
 
       <div className="text-center mb-8">
         <p className="text-xs font-display tracking-[0.3em] text-ink-100/40">
-          INTEGRATED WITH · 整合主流平台
+          {t("marquee.label")}
         </p>
       </div>
 

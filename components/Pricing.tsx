@@ -1,24 +1,36 @@
 "use client";
 import { motion } from "framer-motion";
+import { useI18n } from "@/lib/i18n/provider";
+import type { DictKey } from "@/lib/i18n/dict";
 
-const plans = [
-  { name: "Lite", price: "1,490", active: 5, archived: 10, target: "單人接案者、小型工作室", popular: false },
-  { name: "Starter", price: "3,990", active: 10, archived: 30, target: "5–10 人小型代理商", popular: false },
-  { name: "Pro", price: "9,990", active: 50, archived: 100, target: "10–30 人中型代理商", popular: true },
-  { name: "Scale", price: "21,800", active: 80, archived: 200, target: "30 人以上大型代理商", popular: false },
-  { name: "Brand", price: "5,990", active: "—", archived: "—", target: "品牌方直接使用", popular: false },
+type Plan = {
+  name: string;
+  price: string;
+  active: number | string;
+  archived: number | string;
+  targetKey: DictKey;
+  popular?: boolean;
+};
+
+const plans: Plan[] = [
+  { name: "Lite", price: "1,490", active: 5, archived: 10, targetKey: "pricing.plan.lite" },
+  { name: "Starter", price: "3,990", active: 10, archived: 30, targetKey: "pricing.plan.starter" },
+  { name: "Pro", price: "9,990", active: 50, archived: 100, targetKey: "pricing.plan.pro", popular: true },
+  { name: "Scale", price: "21,800", active: 80, archived: 200, targetKey: "pricing.plan.scale" },
+  { name: "Brand", price: "5,990", active: "—", archived: "—", targetKey: "pricing.plan.brand" },
 ];
 
 export function Pricing() {
+  const { t } = useI18n();
   return (
     <section id="pricing" className="relative py-20 md:py-32">
       <div className="max-w-7xl mx-auto px-4 md:px-6">
         <div className="flex items-baseline justify-between mb-12 md:mb-20">
           <div className="flex items-center gap-4">
             <span className="font-display text-sm tracking-[0.3em] text-accent-lime">05 ──</span>
-            <span className="font-display text-sm tracking-widest text-ink-100/40">PRICING</span>
+            <span className="font-display text-sm tracking-widest text-ink-100/40">{t("pricing.section")}</span>
           </div>
-          <div className="hidden md:block font-display text-xs tracking-widest text-ink-100/30">/ 訂閱方案</div>
+          <div className="hidden md:block font-display text-xs tracking-widest text-ink-100/30">{t("pricing.subtitle")}</div>
         </div>
 
         <motion.h2
@@ -28,13 +40,13 @@ export function Pricing() {
           transition={{ duration: 0.7 }}
           className="font-display font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight tracking-tight max-w-3xl mb-6 md:mb-8"
         >
-          依代理商規模，
+          {t("pricing.title.line1")}
           <br />
-          <span className="text-accent-lime">五階方案</span>
+          <span className="text-accent-lime">{t("pricing.title.lime")}</span>
         </motion.h2>
 
         <p className="text-sm md:text-base text-ink-100/60 max-w-2xl mb-10 md:mb-16 leading-relaxed">
-          14 天免費試用、30 天退款保證、前 10 家 Founding Members 享 6 個月 5 折優惠。
+          {t("pricing.terms")}
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
@@ -48,12 +60,12 @@ export function Pricing() {
               className={`relative p-6 transition-all ${
                 plan.popular
                   ? "bg-gradient-to-b from-accent-lime/15 to-accent-lime/5 border-2 border-accent-lime"
-                  : "bg-white/[0.02] border border-white/[0.08] hover:border-white/20"
+                  : "bg-line/[0.02] border border-line/[0.08] hover:border-line/20"
               }`}
             >
               {plan.popular && (
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 bg-accent-lime text-ink-950 text-[10px] font-display font-bold tracking-widest">
-                  MOST POPULAR
+                  {t("pricing.popular")}
                 </div>
               )}
 
@@ -61,26 +73,26 @@ export function Pricing() {
                 {plan.name}
               </div>
               <div className="text-xs text-ink-100/50 mb-6 h-8 leading-snug">
-                {plan.target}
+                {t(plan.targetKey)}
               </div>
 
-              <div className="mb-6 pb-6 border-b border-white/[0.08]">
+              <div className="mb-6 pb-6 border-b border-line/[0.08]">
                 <div className="flex items-baseline gap-1">
                   <span className="text-xs text-ink-100/50 font-display">NT$</span>
                   <span className="font-display font-bold text-3xl tabular">{plan.price}</span>
                 </div>
-                <div className="text-xs text-ink-100/40 mt-1 font-display">/ 月</div>
+                <div className="text-xs text-ink-100/40 mt-1 font-display">{t("pricing.month")}</div>
               </div>
 
               <div className="space-y-3 text-sm">
                 <div className="flex items-baseline justify-between">
-                  <span className="text-ink-100/50 text-xs font-display tracking-wide">活躍客戶</span>
+                  <span className="text-ink-100/50 text-xs font-display tracking-wide">{t("pricing.activeClients")}</span>
                   <span className={`font-display tabular font-semibold ${plan.popular ? "text-accent-lime" : ""}`}>
                     {plan.active}
                   </span>
                 </div>
                 <div className="flex items-baseline justify-between">
-                  <span className="text-ink-100/50 text-xs font-display tracking-wide">封存客戶</span>
+                  <span className="text-ink-100/50 text-xs font-display tracking-wide">{t("pricing.archivedClients")}</span>
                   <span className="font-display tabular text-ink-100/70">{plan.archived}</span>
                 </div>
               </div>
@@ -88,7 +100,6 @@ export function Pricing() {
           ))}
         </div>
 
-        {/* Bonus Card */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -100,21 +111,22 @@ export function Pricing() {
           <div className="relative grid md:grid-cols-2 gap-8 items-center">
             <div>
               <div className="font-display text-xs tracking-widest text-accent-lime mb-3">
-                FOUNDING MEMBERS · LIMITED 10 SLOTS
+                {t("pricing.bonus.label")}
               </div>
               <h3 className="font-display font-bold text-2xl sm:text-3xl mb-4 leading-tight">
-                成為前 10 家種子客戶，<br />享 6 個月 <span className="text-accent-lime">5 折優惠</span>
+                {t("pricing.bonus.title.line1")}
+                <br />
+                {t("pricing.bonus.title.line2.before")}
+                <span className="text-accent-lime">{t("pricing.bonus.title.lime")}</span>
               </h3>
-              <p className="text-ink-100/70 leading-relaxed text-sm">
-                換取 1 年合約 + 案例研究授權 + 每月 30 分鐘深度回饋訪談。專屬權益包含創辦人個人 LINE 直接聯繫、新功能優先體驗權、永久 9 折續約優惠。
-              </p>
+              <p className="text-ink-100/70 leading-relaxed text-sm">{t("pricing.bonus.body")}</p>
             </div>
             <div className="flex md:justify-end">
               <a
                 href="#waitlist"
                 className="group inline-flex items-center gap-2 px-5 sm:px-7 py-3 sm:py-4 bg-accent-lime text-ink-950 font-display font-semibold tracking-wide hover:bg-accent-glow hover:shadow-[0_0_40px_rgba(212,255,0,0.4)] transition-all text-sm sm:text-base"
               >
-                報名 FOUNDING MEMBERS
+                {t("pricing.bonus.cta")}
                 <span className="group-hover:translate-x-1 transition-transform">→</span>
               </a>
             </div>
