@@ -25,13 +25,9 @@ export function Nav() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 md:px-6 flex items-center justify-between gap-3">
-        <a href="#top" onClick={close} className="flex items-center gap-2 group shrink-0">
-          <div className="relative w-7 h-7">
-            <div className="absolute inset-0 bg-accent-lime rounded-sm rotate-45 group-hover:rotate-[60deg] transition-transform duration-700" />
-            <div className="absolute inset-1 bg-ink-950 rounded-sm rotate-45" />
-            <div className="absolute inset-2 bg-accent-lime rounded-sm rotate-45 group-hover:rotate-90 transition-transform duration-1000" />
-          </div>
-          <span className="font-display font-bold text-lg tracking-tight">LOAMIA</span>
+        <a href="#top" onClick={close} className="shrink-0">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/logo.png" alt="LOAMIA" className="h-8 md:h-10 w-auto" />
         </a>
 
         <div className="hidden md:flex items-center gap-8 text-sm font-display tracking-wide text-ink-100/70">

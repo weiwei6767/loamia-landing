@@ -4,13 +4,9 @@ export function Footer() {
       <div className="max-w-7xl mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-8 md:gap-12 mb-12 md:mb-16">
           <div className="sm:col-span-2 lg:col-span-5">
-            <div className="flex items-center gap-2 mb-6">
-              <div className="relative w-7 h-7">
-                <div className="absolute inset-0 bg-accent-lime rotate-45" />
-                <div className="absolute inset-1 bg-ink-950 rotate-45" />
-                <div className="absolute inset-2 bg-accent-lime rotate-45" />
-              </div>
-              <span className="font-display font-bold text-lg">LOAMIA</span>
+            <div className="mb-6">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/logo.png" alt="LOAMIA" className="h-10 w-auto" />
             </div>
             <p className="text-ink-100/60 text-sm leading-relaxed max-w-sm mb-6">
               廣告代理商與品牌方的 AI 行銷作業系統。讓行銷團隊用一個對話介面，操作品牌所有平台、資料與決策。
