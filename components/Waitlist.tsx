@@ -6,14 +6,36 @@ export function Waitlist() {
   const [email, setEmail] = useState("");
   const [company, setCompany] = useState("");
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Note: 實際部署時需接 API 端點儲存到 Supabase / Vercel KV
-    // 目前只做前端展示
-    if (email) {
-      console.log("Waitlist signup:", { email, company });
-      setSubmitted(true);
+    if (!email) return;
+    setError("");
+    setLoading(true);
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          access_key: "3e6de9fc-57a1-496f-b622-5cf5660f5766",
+          subject: "Loamia Waitlist 新註冊",
+          from_name: "Loamia Landing",
+          email,
+          company: company || "(未填)",
+        }),
+      });
+      const data = await res.json();
+      if (data.success) {
+        setSubmitted(true);
+      } else {
+        setError("送出失敗，請稍後再試");
+      }
+    } catch {
+      setError("網路錯誤，請稍後再試");
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -72,10 +94,17 @@ export function Waitlist() {
             </div>
             <button
               type="submit"
-              className="w-full px-8 py-4 bg-accent-lime text-ink-950 font-display font-bold tracking-wide hover:bg-accent-glow hover:shadow-[0_0_60px_rgba(212,255,0,0.5)] transition-all"
+              disabled={loading}
+              className="w-full px-8 py-4 bg-accent-lime text-ink-950 font-display font-bold tracking-wide hover:bg-accent-glow hover:shadow-[0_0_60px_rgba(212,255,0,0.5)] transition-all disabled:opacity-60 disabled:cursor-not-allowed"
             >
-              加入等候名單 →
+              {loading ? "送出中..." : "加入等候名單 →"}
             </button>
+
+            {error && (
+              <p className="mt-4 text-sm text-red-400 font-display tracking-wide">
+                {error}
+              </p>
+            )}
 
             <p className="mt-6 text-xs text-ink-100/40 font-display tracking-wide">
               我們會在產品上線前一週通知您。不會發送任何垃圾訊息。

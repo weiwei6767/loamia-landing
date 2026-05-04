@@ -30,16 +30,10 @@ export function Founder() {
                 <div className="relative font-display font-bold text-8xl md:text-9xl text-accent-lime/80">
                   陳
                 </div>
-                <div className="absolute bottom-6 left-6 right-6 flex items-end justify-between">
-                  <div>
-                    <div className="font-display text-xs tracking-widest text-ink-100/40 mb-1">FOUNDER</div>
-                    <div className="font-display font-bold text-2xl">陳聖凱</div>
-                    <div className="text-xs text-ink-100/50 mt-1">Sheng-Kai Chen</div>
-                  </div>
-                  <div className="text-right">
-                    <div className="font-display text-xs tracking-widest text-accent-lime">SCU</div>
-                    <div className="text-xs text-ink-100/50 mt-1">資管系</div>
-                  </div>
+                <div className="absolute bottom-6 left-6 right-6">
+                  <div className="font-display text-xs tracking-widest text-ink-100/40 mb-1">FOUNDER</div>
+                  <div className="font-display font-bold text-2xl">陳聖凱</div>
+                  <div className="text-xs text-ink-100/50 mt-1">Sheng-Kai Chen</div>
                 </div>
               </div>
             </div>
