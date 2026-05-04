@@ -41,7 +41,7 @@ export function Nav() {
 
         <div className="flex items-center gap-2">
           <a
-            href="#waitlist"
+            href="https://app.loamia.xyz/login"
             className="hidden sm:inline-flex group relative px-5 py-2.5 bg-accent-lime text-ink-950 font-display font-semibold text-sm tracking-wide hover:bg-accent-glow transition-colors"
           >
             <span className="relative z-10">{t("nav.cta")}</span>
@@ -71,7 +71,7 @@ export function Nav() {
           <a href="#pricing" onClick={close} className="text-ink-50 hover:text-accent-lime transition">{t("nav.pricing")}</a>
           <a href="#founder" onClick={close} className="text-ink-50 hover:text-accent-lime transition">{t("nav.founder")}</a>
           <a
-            href="#waitlist"
+            href="https://app.loamia.xyz/login"
             onClick={close}
             className="mt-2 inline-flex justify-center items-center px-5 py-3 bg-accent-lime text-ink-950 font-semibold"
           >

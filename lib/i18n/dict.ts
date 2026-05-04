@@ -8,7 +8,7 @@ export const dict = {
   "nav.product": { zh: "PRODUCT", en: "PRODUCT" },
   "nav.pricing": { zh: "PRICING", en: "PRICING" },
   "nav.founder": { zh: "FOUNDER", en: "FOUNDER" },
-  "nav.cta": { zh: "JOIN WAITLIST →", en: "JOIN WAITLIST →" },
+  "nav.cta": { zh: "開始使用 →", en: "GET STARTED →" },
 
   // Hero
   "hero.badge": { zh: "EARLY ACCESS · 2026 Q3", en: "EARLY ACCESS · 2026 Q3" },
