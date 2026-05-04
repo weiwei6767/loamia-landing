@@ -19,7 +19,7 @@ export function Waitlist() {
         method: "POST",
         headers: { "Content-Type": "application/json", Accept: "application/json" },
         body: JSON.stringify({
-          access_key: "3e6de9fc-57a1-496f-b622-5cf5660f5766",
+          access_key: "1e4bbac5-5f51-4214-8ea3-21140a410409",
           subject: "Loamia Waitlist 新註冊",
           from_name: "Loamia Landing",
           email,
