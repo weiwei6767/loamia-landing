@@ -186,7 +186,6 @@ export const dict = {
   "pricing.plan.starter": { zh: "5–10 人小型代理商", en: "Small agencies, 5-10 people" },
   "pricing.plan.pro": { zh: "10–30 人中型代理商", en: "Mid-size agencies, 10-30 people" },
   "pricing.plan.scale": { zh: "30 人以上大型代理商", en: "Large agencies, 30+ people" },
-  "pricing.plan.brand": { zh: "品牌方直接使用", en: "Direct-to-brand usage" },
   "pricing.popular": { zh: "MOST POPULAR", en: "MOST POPULAR" },
   "pricing.activeClients": { zh: "活躍客戶", en: "Active clients" },
   "pricing.archivedClients": { zh: "封存客戶", en: "Archived clients" },

@@ -17,7 +17,6 @@ const plans: Plan[] = [
   { name: "Starter", price: "3,990", active: 10, archived: 30, targetKey: "pricing.plan.starter" },
   { name: "Pro", price: "9,990", active: 50, archived: 100, targetKey: "pricing.plan.pro", popular: true },
   { name: "Scale", price: "21,800", active: 80, archived: 200, targetKey: "pricing.plan.scale" },
-  { name: "Brand", price: "5,990", active: "—", archived: "—", targetKey: "pricing.plan.brand" },
 ];
 
 export function Pricing() {
@@ -49,7 +48,7 @@ export function Pricing() {
           {t("pricing.terms")}
         </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {plans.map((plan, i) => (
             <motion.div
               key={plan.name}
