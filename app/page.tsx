@@ -6,7 +6,6 @@ import { Modules } from "@/components/Modules";
 import { Differentiation } from "@/components/Differentiation";
 import { DualState } from "@/components/DualState";
 import { Pricing } from "@/components/Pricing";
-import { Founder } from "@/components/Founder";
 import { Waitlist } from "@/components/Waitlist";
 import { Footer } from "@/components/Footer";
 
@@ -21,7 +20,6 @@ export default function Home() {
       <Differentiation />
       <DualState />
       <Pricing />
-      <Founder />
       <Waitlist />
       <Footer />
     </main>
