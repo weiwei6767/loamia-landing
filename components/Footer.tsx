@@ -1,52 +1,53 @@
+"use client";
+
+import { useI18n } from "@/lib/i18n/provider";
+
 export function Footer() {
+  const { t } = useI18n();
   return (
-    <footer className="relative pt-20 pb-10 border-t border-white/[0.06]">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="grid lg:grid-cols-12 gap-12 mb-16">
-          <div className="lg:col-span-5">
-            <div className="flex items-center gap-2 mb-6">
-              <div className="relative w-7 h-7">
-                <div className="absolute inset-0 bg-accent-lime rotate-45" />
-                <div className="absolute inset-1 bg-ink-950 rotate-45" />
-                <div className="absolute inset-2 bg-accent-lime rotate-45" />
-              </div>
-              <span className="font-display font-bold text-lg">LOAMIA</span>
+    <footer className="relative pt-16 md:pt-20 pb-8 md:pb-10 border-t border-line/[0.06]">
+      <div className="max-w-7xl mx-auto px-4 md:px-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-8 md:gap-12 mb-12 md:mb-16">
+          <div className="sm:col-span-2 lg:col-span-5">
+            <div className="mb-6">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/logo.png" alt="LOAMIA" className="h-10 w-auto" />
             </div>
             <p className="text-ink-100/60 text-sm leading-relaxed max-w-sm mb-6">
-              廣告代理商與品牌方的 AI 行銷作業系統。讓行銷團隊用一個對話介面，操作品牌所有平台、資料與決策。
+              {t("footer.tagline")}
             </p>
             <div className="flex items-center gap-3 text-xs text-ink-100/40 font-display tracking-wide">
-              <span>EARLY ACCESS · 2026 Q3</span>
+              <span>{t("footer.early")}</span>
             </div>
           </div>
 
           <div className="lg:col-span-2">
             <div className="font-display text-xs tracking-widest text-ink-100/40 mb-4">
-              PRODUCT
+              {t("footer.product")}
             </div>
             <ul className="space-y-3 text-sm">
-              <li><a href="#modules" className="text-ink-100/70 hover:text-accent-lime transition">功能模組</a></li>
-              <li><a href="#pricing" className="text-ink-100/70 hover:text-accent-lime transition">訂閱方案</a></li>
-              <li><a href="#waitlist" className="text-ink-100/70 hover:text-accent-lime transition">加入等候</a></li>
+              <li><a href="#modules" className="text-ink-100/70 hover:text-accent-lime transition">{t("footer.product.modules")}</a></li>
+              <li><a href="#pricing" className="text-ink-100/70 hover:text-accent-lime transition">{t("footer.product.pricing")}</a></li>
+              <li><a href="#waitlist" className="text-ink-100/70 hover:text-accent-lime transition">{t("footer.product.waitlist")}</a></li>
             </ul>
           </div>
 
           <div className="lg:col-span-2">
             <div className="font-display text-xs tracking-widest text-ink-100/40 mb-4">
-              COMPANY
+              {t("footer.company")}
             </div>
             <ul className="space-y-3 text-sm">
-              <li><a href="#problem" className="text-ink-100/70 hover:text-accent-lime transition">產業洞察</a></li>
+              <li><a href="#problem" className="text-ink-100/70 hover:text-accent-lime transition">{t("footer.company.problem")}</a></li>
             </ul>
           </div>
 
           <div className="lg:col-span-3">
             <div className="font-display text-xs tracking-widest text-ink-100/40 mb-4">
-              CONTACT
+              {t("footer.contact")}
             </div>
             <ul className="space-y-3 text-sm">
               <li className="text-ink-100/60">
-                EMAIL：
+                {t("footer.contact.email.label")}
                 <a href="mailto:hello@loamia.xyz" className="text-ink-100/80 hover:text-accent-lime transition">
                   hello@loamia.xyz
                 </a>
@@ -55,12 +56,9 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="pt-8 border-t border-white/[0.06] flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+        <div className="pt-8 border-t border-line/[0.06] flex flex-col md:flex-row md:items-center md:justify-between gap-4">
           <div className="text-xs text-ink-100/40 font-display tracking-wide">
-            © 2026 LOAMIA · ALL RIGHTS RESERVED
-          </div>
-          <div className="text-xs text-ink-100/30 font-display tracking-wide">
-            BUILT WITH VIBE CODING · CLAUDE CODE
+            {t("footer.copyright")}
           </div>
         </div>
       </div>
